@@ -26,7 +26,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>API</mainClass>
+                            <mainClass>com.axlav.API</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
