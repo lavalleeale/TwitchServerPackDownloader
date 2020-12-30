@@ -3,7 +3,7 @@ name: Java CI
 on: [push]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,4 +13,9 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Maven
-        run: mvn clean compile assembly:single
+        run: mvn clean compile assembly:single -q
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: TwitchServerPackDownloader.jar
+          path: target/TwitchServerPackDownloader.jar

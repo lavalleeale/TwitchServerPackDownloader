@@ -1,6 +1,7 @@
 package com.axlav;
 
-import com.google.gson.*;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonArray;
 import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.net.URLEncoder;
@@ -8,7 +9,7 @@ import java.util.Scanner;
 
 import static com.axlav.APIcalls.*;
 
-public class API {
+public class serverPackDownloader {
     public static void main(String[] args) throws Exception {
         String baseURL = "https://addons-ecs.forgesvc.net/api/v2/";
         String searchURL = "addon/search?categoryId=%s&gameId=%s&pageSize=%s&searchFilter=%s";
